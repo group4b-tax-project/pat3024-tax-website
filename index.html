@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAT3024 Taxation 2 Assistant</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>PAT3024 Taxation 2 Assistant</h1>
+
+    <p>Welcome to our Corporate Taxation project website.</p>
+
+    <h2>Our Interactive Modules</h2>
+
+
+<ul>
+    <li><a href="#calculator">Corporate Tax Calculator</a></li>
+    <li><a href="#comparison">Tax Planning Comparison</a></li>
+    <li><a href="#incentives">Tax Incentive Checklist</a></li>
+    <li><a href="#risk">Tax Compliance Risk Scanner</a></li>
+</ul>
+
+
+<section id="calculator">
+    <h2>Corporate Tax Calculator</h2>
+
+    <p>Enter the company's chargeable income and applicable tax rate.</p>
+
+    <label for="income">Chargeable Income (RM):</label>
+    <input type="number" id="income" min="0" placeholder="Enter chargeable income">
+
+    <br><br>
+
+    <label for="rate">Tax Rate (%):</label>
+    <input type="number" id="rate" min="0" max="100" value="24">
+
+    <br><br>
+
+    <button onclick="calculateTax()">Calculate Tax</button>
+
+    <h3 id="result">Your result will appear here.</h3>
+</section>
+
+
+    <p>Prepared by: Nur Adriana Balqis and group.</p>
+
+
+<script>
+function calculateTax() {
+    let income = Number(document.getElementById("income").value);
+    let rate = Number(document.getElementById("rate").value);
+
+    if (
+        document.getElementById("income").value === "" ||
+        document.getElementById("rate").value === "" ||
+        income < 0 ||
+        rate < 0 ||
+        rate > 100
+    ) {
+        document.getElementById("result").textContent =
+            "Please enter valid values.";
+        return;
+    }
+
+    let tax = income * rate / 100;
+
+    document.getElementById("result").textContent =
+        "Estimated Tax: RM " + tax.toLocaleString("en-MY", {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+        });
+}
+</script>
+</body>
+</html>
+
+</body>
+</html>
