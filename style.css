@@ -162,3 +162,37 @@ tbody tr:last-child {
     font-weight: bold;
     background-color: #e3ebf5;
 }
+/* Responsive Income Statement Table */
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.table-container table {
+    width: 100%;
+    min-width: 450px;
+}
+
+/* Module 2: Question 1 Layout */
+
+#q1 {
+    max-width: 850px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #d5dce8;
+    box-sizing: border-box;
+}
+
+#q1 p {
+    line-height: 1.6;
+}
+
+#q1 h3 {
+    color: #16345c;
+    margin-top: 25px;
+}
