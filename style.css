@@ -125,3 +125,40 @@ li::marker {
     color: #16345c;
     overflow-wrap: anywhere;
 }
+/* Income Statement Table */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    background-color: white;
+}
+
+th, td {
+    border: 1px solid #d5dce5;
+    padding: 12px;
+}
+
+th {
+    background-color: #17365d;
+    color: white;
+    text-align: left;
+}
+
+td:first-child {
+    text-align: left;
+}
+
+td:last-child {
+    text-align: right;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f6fc;
+}
+
+tbody tr:last-child {
+    font-weight: bold;
+    background-color: #e3ebf5;
+}
