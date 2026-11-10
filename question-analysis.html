@@ -35,5 +35,54 @@
     <button onclick="showQuestion('q5')">Question 5</button>
 
 </div>
+<!-- Welcome Message -->
+<section id="welcome">
+    <h2>Welcome to Case Study Analysis</h2>
+    <p>Please select a question above to begin your learning.</p>
+</section>
+
+<!-- Question 1 -->
+<section id="q1" hidden>
+    <h2>Question 1</h2>
+    <p>Question 1 content will be added here.</p>
+</section>
+
+<!-- Question 2 -->
+<section id="q2" hidden>
+    <h2>Question 2</h2>
+    <p>Question 2 content will be added here.</p>
+</section>
+
+<!-- Question 3 -->
+<section id="q3" hidden>
+    <h2>Question 3</h2>
+    <p>Question 3 content will be added here.</p>
+</section>
+
+<!-- Question 4 -->
+<section id="q4" hidden>
+    <h2>Question 4</h2>
+    <p>Question 4 content will be added here.</p>
+</section>
+
+<!-- Question 5 -->
+<section id="q5" hidden>
+    <h2>Question 5</h2>
+    <p>Question 5 content will be added here.</p>
+</section>
+<script>
+function showQuestion(questionId) {
+
+    let questions = ["q1", "q2", "q3", "q4", "q5"];
+
+    document.getElementById("welcome").hidden = true;
+
+    questions.forEach(function(id) {
+        document.getElementById(id).hidden = true;
+    });
+
+    document.getElementById(questionId).hidden = false;
+}
+</script>
 </body>
 </html>
